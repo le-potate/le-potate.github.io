@@ -270,7 +270,7 @@ function fillRow (attributes) {
         if (solved === 'false') {
             solved = 'true'
             window.localStorage.setItem("solved", solved)
-            stats[guessnumber] += 1
+            stats[guessnumber-1] += 1
             window.localStorage.setItem("stats", JSON.stringify(stats))
             update_stats();
         }
