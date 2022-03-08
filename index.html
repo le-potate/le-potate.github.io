@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draisaitl</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+<h1> Draisaitl </h1>
+
+<div class="test">
+<input list="players" name="playerguess" id="playerguess" placeholder="Enter your guess">
+<datalist id="players">
+</datalist>
+</div>
+
+<div id="game-board">
+
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+
+<script src="players.json" type="text/javascript"></script>
+<script src="script.js" type="module"></script>
+
+<div class="topright">
+    <a href="#statsmodal" class="toprighttext">Stats</a>
+    <br>
+    <a href="#infomodal" class="toprighttext">Info</a>
+</div>
+
+
+
+<div id="statsmodal" class="modal">
+    <div>	<a href="#close" title="Close" class="close">X</a>
+
+        <h3>Statistics</h3>
+
+        <table class="table1">
+            <tr>
+                <th id="played"></th>
+                <th id="percent"></th>
+                <th id="streak"></th>
+                <th id="best_streak"></th>
+            </tr>
+            <tr>
+                <th>Played</th>
+                <th>Win %</th>
+                <th>Current Streak</th>
+                <th>Max Streak</th>
+            </tr>
+        </table>
+
+        <p style="font-size:1.5rem;text-align:center;font-weight:700;">Number of guesses</p>
+
+        <table class="table2">
+            <tr>
+                <th>1:</th>
+                <th id="oneguess"></th>
+            </tr>
+            <tr>
+                <th>2:</th>
+                <th id="twoguesses"></th>
+            </tr>
+            <tr>
+                <th>3:</th>
+                <th id="threeguesses"></th>
+            </tr>
+            <tr>
+                <th>4:</th>
+                <th id="fourguesses"></th>
+            </tr>
+            <tr>
+                <th>5:</th>
+                <th id="fiveguesses"></th>
+            </tr>
+            <tr>
+                <th>6:</th>
+                <th id="sixguesses"></th>
+            </tr>
+            <tr>
+                <th>7:</th>
+                <th id="sevenguesses"></th>
+            </tr>
+            <tr>
+                <th>8:</th>
+                <th id="eightguesses"></th>
+            </tr>
+            <tr>
+                <th>💀:</th>
+                <th id="losses"></th>
+            </tr>
+        </table>
+        <button type="button" id="share" style="visibility:visible">Share!</button>
+        <p id="demo">hi</p>
+    </div>
+</div>
+
+<div id="infomodal" class="modal">
+    <div>	<a href="#close" title="Close" class="close">X</a>
+        <h3>Information</h3>
+        <p> Guess the NHL player! You have eight guesses to find the daily player.</p><br>
+        <p> Green in any column means an exact match</p><br>
+        <p> Yellow in the team, conference or division column means that the player used to be in this team/div/conf</p><br>
+        <p> Yellow in the height, age or number column means that you are off by two!</p><br>
+        <p> Note that the stats were last updated on 2022-03-05. This means that the age/team/etc. for that player are as of that date</p>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Dark Theme:</h2> <label class="switch">
+        <input type="checkbox" id="themetoggle">
+        <span class="slider round"></span>
+    </label>
+</div>
+
+<button onClick="window.location.reload();">Refresh Page</button>
+</body>
+</html>
