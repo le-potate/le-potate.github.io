@@ -136,7 +136,7 @@ share.addEventListener("click", () => {
         emojis_string += '\n'
     }
     navigator.clipboard.writeText(emojis_string);
-    document.getElementById("demo").innerHTML = "Hello World";
+    // document.getElementById("demo").innerHTML = "Hello World";
 });
 
 
@@ -277,7 +277,7 @@ function fillRow (attributes) {
 
         //statsmodal.style.opacity = 1;
         //statsmodal.style.pointerEvents = 'auto';
-        document.getElementById("demo").innerHTML = "Hello ";
+        // document.getElementById("demo").innerHTML = "Hello ";
     }
 
 
