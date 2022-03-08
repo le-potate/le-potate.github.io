@@ -130,7 +130,7 @@ playerguess.addEventListener("keypress", function(e) {
 });
 
 share.addEventListener("click", () => {
-    let emojis_string = 'Draisaitl #'+day_number+' '+guessnumber+'\\'+NUMBER_OF_GUESSES+'\n\n'
+    let emojis_string = 'Draisaitl #'+day_number+' '+guessnumber+'/'+NUMBER_OF_GUESSES+'\n\n'
     for (var i=0; i < emojis.length; i++) {
         emojis_string += emojis[i]
         emojis_string += '\n'
